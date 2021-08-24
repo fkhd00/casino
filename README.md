@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+#Casino App
+#live Version:http://fkhd00.github.io/casino
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Problem Statement
+- Configure Single-page application (SPA), using TypeScript. You might decide to use [Create React App](https://github.com/facebook/create-react-app) as the template
 
-## Available Scripts
+- Layout consists of three parts: header, content and footer
 
-In the project directory, you can run:
+- Header Consists of
 
-### `npm start`
+  - Company logo (or developer's name) on the left and balance + avatar on the right
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  - Balance displays real balance in format $9.99 and is updated after each game.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  - Depending on the state user sees
 
-### `npm test`
+  - Login button which opens a popup with form (email/password)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  - Avatar and logout button
 
-### `npm run build`
+  - User has to be persistent i.e. you should keep data (name, balance) in local storage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  - User can start playing as a guest but should be able to log in at any time
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  - Content
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  - Has table with game results.
 
-### `npm run eject`
+  - Columns are id, slot 1-3, time.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  - Id and time are sortable both ways
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  - Displays 10 rows per page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  - There is a button that starts a game i.e. opens a popup
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  - Popup has 3 slots in the content part and 3 buttons in the button pane
 
-## Learn More
+  - When the user presses the first button - random symbols ♠, ♥, ♦, ♣ are displayed in slots
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   - Each spin costs $2 from the balance
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  - Thee different symbols XYZ does nothing
 
-### Code Splitting
+  - Each pair XXY XYX YXX adds $0.5 to the balance
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  - Each three in row XXX adds $2 to the balance
 
-### Analyzing the Bundle Size
+  - ♠♠♠ adds $5 to the balance
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  - User can't play in credit, so when he runs out of money the game is over
 
-### Making a Progressive Web App
+  - The second button is meant for debugging. It fakes ♠♠♠ spin
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  - After each spin results are added to the table.
 
-### Advanced Configuration
+  - Third button closes the popup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+  - Footer
 
-### Deployment
+  - Has your copyright
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Bonus: add fancy animation to spin
+
+- Bonus: write a single test to check popup state
+
+- Bonus: deploy the app to Heroku or any other service

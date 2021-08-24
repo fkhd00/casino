@@ -1,13 +1,93 @@
-body {
+body{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+#head{
+  display:flex;
+  justify-content: flex-end;
+  height: 80px;
+  background-color: rgb(240, 240, 252);
+  box-shadow: 0 0 0.5rem black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#name{
+  display: flex;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+#infoContainer{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30px;
+}
+
+#userInfo{
+  display: inline-flex;
+}
+
+#userInfo li{
+  list-style-type: none;
+}
+#accIcon{
+  margin-right: 10px;
+}
+
+#gamebox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slot{
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgb(21, 11, 163);
+  margin-right: 10px;
+  border-radius: 20px;
+}
+#spinButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+#content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#gameContainer{
+  margin-right: 700px;
+}
+#tableContainer{
+  margin-top: 20px;
+  margin-right: 50px;
+  margin-left: 20px;
+}
+#fundmessage{
+  color:red;
+  text-align: center;
+}
+.slot{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+#balance{
+  margin-top: 25px;
+}
+#copy{
+  font-size: 15px;
+}
+
+#footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(17, 213, 219);
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  position: absolute;
 }
