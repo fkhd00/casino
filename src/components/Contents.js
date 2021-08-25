@@ -71,7 +71,7 @@ function Contents({start,message,addbalance,slot1,tabledata}){
                         aria-labelledby="alert-dialog-slide-title"
                         aria-describedby="alert-dialog-slide-description"
                     >
-                        <DialogTitle id="alert-dialog-slide-title">{"Use Google's location service?"}</DialogTitle>
+                        <DialogTitle id="alert-dialog-slide-title">{"Play the slot Machine"}</DialogTitle>
                         <DialogContent>
                         <DialogContentText id="alert-dialog-slide-description">
                             Click Spin to start the Game !! 

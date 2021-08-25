@@ -28,7 +28,6 @@ const onStart=()=>{
         count[1]=result.match(/1/g);
         count[2]=result.match(/2/g);
         count[3]=result.match(/3/g);
-        console.log(count)
         for(let j=0;j<4;j++){
             if(count[j]!==null){
                 scorec.push(count[j]);
@@ -68,7 +67,6 @@ const addfunds=()=>{
 function display(result){
   const array=result.split("");
   const slots=[]
-  console.log(array);
   for(let i=0;i<3;i++){
       if(array[i]==="0"){
           slots[i]='♠';
@@ -85,8 +83,7 @@ function display(result){
   }
   setSlotSym1(slots);
   let res=slots.join("");
-  dataArray.push(dataTable(res))
-  console.log(tabledata);
+  dataArray.push(dataTable(res));
   
   
 }
